@@ -22,6 +22,6 @@ Instead, `PrivateKey` class can load a private key from a JSON file which contai
 
 ## Security
 
-Even though this library is based on a well-known python-rsa, there is no guarantee that the port has the same level of security as the original implementation. The library has been re-worked quite a lot. In particular, [this doesn't use blinding to preven side-channel attacks](https://github.com/artem-smotrakov/micropython-rsa-signing/blob/master/rsa/key.py#L128), and it uses a [custom implementation of modular exponentiation](https://github.com/artem-smotrakov/micropython-rsa-signing/blob/master/rsa/common.py#L172) since MicroPython doesn't support it (at least 1.10).
+Even though this library is based on a well-known python-rsa, there is no guarantee that the port has the same level of security as the original implementation. The library has been re-worked quite a lot. In particular, [this port doesn't use blinding to preven side-channel attacks](https://github.com/artem-smotrakov/micropython-rsa-signing/blob/master/rsa/key.py#L128), and it uses a [custom implementation of modular exponentiation](https://github.com/artem-smotrakov/micropython-rsa-signing/blob/master/rsa/common.py#L172) since MicroPython doesn't support it (at least 1.10).
 
 Additional security research is required to prove that this port doesn't contain vulnerabilities. Use with care.
