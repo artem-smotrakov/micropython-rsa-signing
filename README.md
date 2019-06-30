@@ -1,6 +1,6 @@
 # RSA signing on MicroPython
 
-This is an implementation of RSA signing for MicroPython. It's writter in pure Python, and based on [python-rsa](https://github.com/sybrenstuvel/python-rsa).
+This is an implementation of RSA signing for MicroPython. It's writter in pure Python, and based on [python-rsa](https://github.com/sybrenstuvel/python-rsa) version 4.0.
 
 Originally, this port was supposed to be used [for signing JWT claims on ESP8266](https://github.com/artem-smotrakov/esp32-weather-google-sheets). Since ESP8266 doesn't have too much memory, the original python-rsa library was truncated a lot. Nevertheless, it didn't work out. RSA signing worked very slow and threw exeptions due to low memory. In the end, [the port successfully run only on ESP32](https://github.com/artem-smotrakov/esp32-weather-google-sheets/blob/master/src/google/auth.py#L66).
 
